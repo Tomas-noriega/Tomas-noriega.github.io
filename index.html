@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tomas Noriega</title>
+  <meta name="description" content="Tomas Noriega — Aquatics lifeguard and Finance & Marketing/Accounting student at Fairfield University.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#info" data-open="about">Skip to information</a>
+
+  <!-- ========== HOME (full-bleed photo) ========== -->
+  <main id="home" class="home">
+    <div class="home__media" aria-hidden="true">
+      <img src="profile.jpg" alt="" class="home__img">
+      <div class="home__shade"></div>
+    </div>
+
+    <header class="topnav">
+      <nav aria-label="Primary">
+        <ul class="topnav__list">
+          <li><a href="#info" class="topnav__link" data-open="about">About</a></li>
+          <li><a href="#info" class="topnav__link" data-open="experience">Experience</a></li>
+          <li><a href="#info" class="topnav__link" data-open="contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <ul class="worklist" id="work-list" aria-label="Experience at a glance">
+        <li>
+          <a href="#info" data-open="job-lifetime" class="worklist__row">
+            <span class="worklist__title">Aquatics Lifeguard</span>
+            <span class="worklist__meta">Lifetime Fitness Athletic, 2023 – Present</span>
+          </a>
+        </li>
+        <li>
+          <a href="#info" data-open="job-utica" class="worklist__row">
+            <span class="worklist__title">Restaurant Cook &amp; Maintenance</span>
+            <span class="worklist__meta">Utica Pie Company, 2021 – 2022</span>
+          </a>
+        </li>
+        <li>
+          <a href="#info" data-open="education" class="worklist__row">
+            <span class="worklist__title">Fairfield University</span>
+            <span class="worklist__meta">Finance &amp; Marketing/Accounting</span>
+          </a>
+        </li>
+        <li>
+          <a href="#info" data-open="certifications" class="worklist__row">
+            <span class="worklist__title">First Aid / CPR / AED</span>
+            <span class="worklist__meta">Certified</span>
+          </a>
+        </li>
+      </ul>
+    </header>
+
+    <h1 class="wordmark">
+      <a href="#info" data-open="about" class="wordmark__link" aria-label="Tomas Noriega — open information">
+        <span class="wordmark__first">TOMAS</span>
+        <span class="wordmark__last">NORIEGA</span>
+      </a>
+    </h1>
+
+    <footer class="home__foot">
+      <span>New York</span>
+      <span class="home__links">
+        <a href="https://www.linkedin.com/in/tomas-noriega-4a77783a1/" class="home__mail" target="_blank" rel="noopener noreferrer">LinkedIn<span class="visually-hidden"> (opens in a new tab)</span></a>
+        <a href="https://www.instagram.com/noriegatomas_07/" class="home__mail" target="_blank" rel="noopener noreferrer">Instagram<span class="visually-hidden"> (opens in a new tab)</span></a>
+        <a href="mailto:tomas.noriega@icloud.com" class="home__mail">tomas.noriega@icloud.com</a>
+      </span>
+    </footer>
+  </main>
+
+  <!-- ========== INFO OVERLAY ========== -->
+  <section id="info" class="info" role="dialog" aria-modal="true" aria-labelledby="info-title" hidden>
+    <div class="info__backdrop" aria-hidden="true">
+      <img src="profile.jpg" alt="" class="info__bg">
+    </div>
+
+    <div class="info__scroll">
+      <div class="info__bar">
+        <button type="button" class="info__close" id="info-close">Close</button>
+      </div>
+
+      <div class="info__inner">
+        <h2 id="info-title" class="visually-hidden">About Tomas Noriega</h2>
+
+        <!-- Intro -->
+        <div class="intro" id="about">
+          <figure class="portrait">
+            <img src="profile.jpg" alt="Portrait of Tomas Noriega" width="320" height="400">
+          </figure>
+          <p class="intro__lead">
+            Tomas Noriega is a certified aquatics lifeguard at Lifetime Fitness Athletic in
+            Harrison, New York, and a Finance and Marketing/Accounting student at Fairfield
+            University. He stays calm and focused under pressure and is committed to keeping
+            every swimmer safe.
+          </p>
+          <p class="intro__sub">
+            A keen listener who welcomes feedback as a way to improve, Tomas enjoys working
+            with members and colleagues alike. He is certified in First Aid, CPR, and AED, and
+            speaks Spanish at a native level.
+          </p>
+        </div>
+
+        <!-- Experience -->
+        <section class="block" id="experience" aria-labelledby="h-experience">
+          <h3 class="block__label" id="h-experience">Experience</h3>
+          <div class="block__body">
+
+            <details class="job" id="job-lifetime" open>
+              <summary class="job__head">
+                <span class="job__role">Aquatics Lifeguard</span>
+                <span class="job__where">Lifetime Fitness Athletic — Harrison, NY</span>
+                <span class="job__when">May 2023 – Present</span>
+              </summary>
+              <ul class="job__list">
+                <li>Monitor the pool area for safety compliance and respond promptly to emergencies.</li>
+                <li>Provide attentive member service, assisting members with questions and concerns.</li>
+                <li>Keep pool facilities clean and organized to enhance the member experience.</li>
+                <li>Enforce facility rules and regulations to promote a safe environment for all guests.</li>
+                <li>Maintain proficiency in first-responder skills, including First Aid and CPR, to support anyone in distress.</li>
+              </ul>
+            </details>
+
+            <details class="job" id="job-utica">
+              <summary class="job__head">
+                <span class="job__role">Restaurant Cook &amp; Maintenance</span>
+                <span class="job__where">Utica Pie Company — White Plains, NY</span>
+                <span class="job__when">Sept 2021 – Apr 2022</span>
+              </summary>
+              <ul class="job__list">
+                <li>Checked freezer and refrigerator temperatures before every shift.</li>
+                <li>Baked consistent, quality items by accurately mixing, dividing, shaping, and proofing.</li>
+                <li>Prepared food in line with recipes and portion-control guidelines.</li>
+              </ul>
+            </details>
+
+          </div>
+        </section>
+
+        <!-- Education -->
+        <section class="block" id="education" aria-labelledby="h-education">
+          <h3 class="block__label" id="h-education">Education</h3>
+          <div class="block__body">
+            <div class="entry">
+              <p class="entry__title">Fairfield University — Fairfield, CT</p>
+              <p>Finance and Marketing/Accounting</p>
+              <p class="entry__note">Dean’s List (First Semester)</p>
+            </div>
+            <div class="entry">
+              <p class="entry__title">Archbishop Stepinac High School — White Plains, NY</p>
+              <p>High School Diploma, May 2025 · 3.6 GPA · Cum Laude</p>
+              <p class="entry__note">National Honor Society (2023 – 2025)</p>
+              <p class="entry__note">High Honor Roll (2021 – 2025)</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Certifications -->
+        <section class="block" id="certifications" aria-labelledby="h-certs">
+          <h3 class="block__label" id="h-certs">Certifications</h3>
+          <div class="block__body">
+            <ul class="plain">
+              <li>Lifeguard Certified</li>
+              <li>First Aid / CPR / AED</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Skills -->
+        <section class="block" id="skills" aria-labelledby="h-skills">
+          <h3 class="block__label" id="h-skills">Skills</h3>
+          <div class="block__body">
+            <ul class="plain plain--cols">
+              <li>Effective Communication</li>
+              <li>Emergency Awareness</li>
+              <li>Public Interaction</li>
+              <li>Physical Fitness</li>
+              <li>Coordinated</li>
+              <li>Collected</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Languages -->
+        <section class="block" id="languages" aria-labelledby="h-lang">
+          <h3 class="block__label" id="h-lang">Languages</h3>
+          <div class="block__body">
+            <p>Spanish — Native or Bilingual</p>
+          </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="block" id="contact" aria-labelledby="h-contact">
+          <h3 class="block__label" id="h-contact">Contact</h3>
+          <div class="block__body">
+            <a class="textlink" href="mailto:tomas.noriega@icloud.com">tomas.noriega@icloud.com</a>
+            <a class="textlink" href="https://www.linkedin.com/in/tomas-noriega-4a77783a1/" target="_blank" rel="noopener noreferrer">LinkedIn<span class="visually-hidden"> (opens in a new tab)</span></a>
+            <a class="textlink" href="https://www.instagram.com/noriegatomas_07/" target="_blank" rel="noopener noreferrer">Instagram<span class="visually-hidden"> (opens in a new tab)</span></a>
+            <p class="entry__note">Based in New York</p>
+          </div>
+        </section>
+
+        <footer class="info__foot">
+          <span>Tomas Noriega © <span id="year">2026</span> All Rights Reserved</span>
+          <a href="#home" class="info__back" data-close>Back to top</a>
+        </footer>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

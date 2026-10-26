@@ -4,7 +4,19 @@
   const info = document.getElementById("info");
   const scroller = info.querySelector(".info__scroll");
   const closeBtn = document.getElementById("info-close");
+  const bar = info.querySelector(".info__bar");
+  const jumpLinks = info.querySelectorAll("[data-jump]");
   let lastTrigger = null;
+
+  // A section's position inside the scrolling overlay
+  function sectionTop(el) {
+    return el.getBoundingClientRect().top - scroller.getBoundingClientRect().top + scroller.scrollTop;
+  }
+
+  function scrollToSection(target) {
+    const top = target.id === "about" ? 0 : sectionTop(target) - bar.offsetHeight - 8;
+    scroller.scrollTo({ top, behavior: "smooth" });
+  }
 
   function openInfo(targetId) {
     if (info.hidden) {
@@ -17,9 +29,7 @@
     if (target && targetId !== "about") {
       if (target.tagName === "DETAILS") target.open = true;
       // Wait one frame so the overlay is laid out before scrolling
-      requestAnimationFrame(() => {
-        scroller.scrollTo({ top: target.offsetTop - 60, behavior: "smooth" });
-      });
+      requestAnimationFrame(() => scrollToSection(target));
     } else {
       scroller.scrollTop = 0;
     }
@@ -49,6 +59,32 @@
   });
 
   closeBtn.addEventListener("click", () => closeInfo());
+
+  // Section menu inside the overlay
+  jumpLinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const target = document.getElementById(link.dataset.jump);
+      if (target) scrollToSection(target);
+    });
+  });
+
+  // Underline the section currently in view
+  scroller.addEventListener("scroll", () => {
+    const line = scroller.scrollTop + bar.offsetHeight + 40;
+    let current = "about";
+    jumpLinks.forEach((link) => {
+      const section = document.getElementById(link.dataset.jump);
+      if (section && sectionTop(section) <= line) current = link.dataset.jump;
+    });
+    // At the very bottom, the last section is the one being read
+    if (scroller.scrollTop + scroller.clientHeight >= scroller.scrollHeight - 2) {
+      current = jumpLinks[jumpLinks.length - 1].dataset.jump;
+    }
+    jumpLinks.forEach((link) => {
+      link.classList.toggle("is-active", link.dataset.jump === current);
+    });
+  }, { passive: true });
 
   info.querySelectorAll("[data-close]").forEach((el) => {
     el.addEventListener("click", (e) => {

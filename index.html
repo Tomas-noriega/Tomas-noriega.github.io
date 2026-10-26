@@ -27,11 +27,18 @@
         <ul class="topnav__list">
           <li><a href="#info" class="topnav__link" data-open="about">About</a></li>
           <li><a href="#info" class="topnav__link" data-open="experience">Experience</a></li>
+          <li><a href="#info" class="topnav__link" data-open="projects">Projects</a></li>
           <li><a href="#info" class="topnav__link" data-open="contact">Contact</a></li>
         </ul>
       </nav>
 
       <ul class="worklist" id="work-list" aria-label="Experience at a glance">
+        <li>
+          <a href="#info" data-open="projects" class="worklist__row">
+            <span class="worklist__title">Reel Lifts</span>
+            <span class="worklist__meta">Marketing venture, iOS app concept</span>
+          </a>
+        </li>
         <li>
           <a href="#info" data-open="job-lifetime" class="worklist__row">
             <span class="worklist__title">Aquatics Lifeguard</span>
@@ -69,9 +76,9 @@
     <footer class="home__foot">
       <span>New York</span>
       <span class="home__links">
-        <a href="https://www.linkedin.com/in/tomas-noriega-4a77783a1/" class="home__mail" target="_blank" rel="noopener noreferrer">LinkedIn<span class="visually-hidden"> (opens in a new tab)</span></a>
-        <a href="https://www.instagram.com/noriegatomas_07/" class="home__mail" target="_blank" rel="noopener noreferrer">Instagram<span class="visually-hidden"> (opens in a new tab)</span></a>
-        <a href="mailto:tomas.noriega@icloud.com" class="home__mail">tomas.noriega@icloud.com</a>
+        <a href="https://www.linkedin.com/in/tomas-noriega-4a77783a1/" class="btn btn--light" target="_blank" rel="noopener noreferrer">LinkedIn<span class="visually-hidden"> (opens in a new tab)</span></a>
+        <a href="https://www.instagram.com/noriegatomas_07/" class="btn btn--light" target="_blank" rel="noopener noreferrer">Instagram<span class="visually-hidden"> (opens in a new tab)</span></a>
+        <a href="mailto:tomas.noriega@icloud.com" class="btn btn--light">Email</a>
       </span>
     </footer>
   </main>
@@ -85,6 +92,16 @@
     <div class="info__scroll">
       <div class="info__bar">
         <button type="button" class="info__close" id="info-close">Close</button>
+        <nav class="sectionnav" aria-label="Sections">
+          <ul>
+            <li><a href="#about" data-jump="about">About</a></li>
+            <li><a href="#experience" data-jump="experience">Experience</a></li>
+            <li><a href="#projects" data-jump="projects">Projects</a></li>
+            <li><a href="#education" data-jump="education">Education</a></li>
+            <li><a href="#skills" data-jump="skills">Skills</a></li>
+            <li><a href="#contact" data-jump="contact">Contact</a></li>
+          </ul>
+        </nav>
       </div>
 
       <div class="info__inner">
@@ -141,6 +158,19 @@
               </ul>
             </details>
 
+          </div>
+        </section>
+
+        <!-- Projects -->
+        <section class="block" id="projects" aria-labelledby="h-projects">
+          <h3 class="block__label" id="h-projects">Projects</h3>
+          <div class="block__body">
+            <div class="entry">
+              <p class="entry__title">Reel Lifts — Marketing Venture</p>
+              <p>An iOS app concept that analyzes filmed top sets and meal photos to coach lifters toward a new personal record. Developed for MKTG 1101: Principles of Marketing at Fairfield University, backed by App Store review research, CDC data and an AI-simulated focus group.</p>
+              <p class="entry__note">“No guesswork. Just PRs.”</p>
+            </div>
+            <a class="btn" href="https://tomas-noriega.github.io/creative-website/" target="_blank" rel="noopener noreferrer">View the Reel Lifts site<span class="visually-hidden"> (opens in a new tab)</span></a>
           </div>
         </section>
 
@@ -201,8 +231,11 @@
           <h3 class="block__label" id="h-contact">Contact</h3>
           <div class="block__body">
             <a class="textlink" href="mailto:tomas.noriega@icloud.com">tomas.noriega@icloud.com</a>
-            <a class="textlink" href="https://www.linkedin.com/in/tomas-noriega-4a77783a1/" target="_blank" rel="noopener noreferrer">LinkedIn<span class="visually-hidden"> (opens in a new tab)</span></a>
-            <a class="textlink" href="https://www.instagram.com/noriegatomas_07/" target="_blank" rel="noopener noreferrer">Instagram<span class="visually-hidden"> (opens in a new tab)</span></a>
+            <div class="btnrow">
+              <a class="btn" href="mailto:tomas.noriega@icloud.com">Email</a>
+              <a class="btn" href="https://www.linkedin.com/in/tomas-noriega-4a77783a1/" target="_blank" rel="noopener noreferrer">LinkedIn<span class="visually-hidden"> (opens in a new tab)</span></a>
+              <a class="btn" href="https://www.instagram.com/noriegatomas_07/" target="_blank" rel="noopener noreferrer">Instagram<span class="visually-hidden"> (opens in a new tab)</span></a>
+            </div>
             <p class="entry__note">Based in New York</p>
           </div>
         </section>
